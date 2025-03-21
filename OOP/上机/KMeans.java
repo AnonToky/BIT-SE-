@@ -1,6 +1,6 @@
 import java.io.*;
 import java.util.*;
-
+//配合iris.data文件使用
 public class KMeans {
 
     // 样本数据类
