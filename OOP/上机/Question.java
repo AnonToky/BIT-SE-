@@ -1,24 +1,27 @@
+import java.util.List;
+
 public class Question {
-    protected String text;
-    protected String[] options;
+    private String title;
+    private List<String> options;
+    private String answer;
 
-    public Question(){}
+    public Question() {
+    }
 
-    public Question(String text,String[] options){
-        this.text = text;
+    public Question(String title, List<String> options, String answer) {
+        this.title = title;
         this.options = options;
+        this.answer = answer;
     }
 
-    public boolean check(char[] answers){
-        return false;
+    public String getAnswer() {
+        return answer;
     }
 
-    public void print(){
-        System.out.println(text);
-        for(String s : options) {
-            System.out.println(s );
+    public void showQuestion() {
+        System.out.println(title);
+        for (int i = 0; i < options.size(); i++) {
+            System.out.println((i + 1) + ". " + options.get(i));
         }
-        System.out.println("请选择：");
     }
 }
-//1120230519孙济勋 3.23日作业
